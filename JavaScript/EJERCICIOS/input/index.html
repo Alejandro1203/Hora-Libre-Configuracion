@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input name="dato" type="text" placeholder="Text Input" value="esto" readonly>
+        <input name="email" type="email" placeholder="Email Input" disabled>
+        <input name="password" type="password" placeholder="Password Input">
+        <input type="number" placeholder="Number Input">
+        <input type="date" placeholder="Date Input">
+        <input type="checkbox" id="checkbox_id" name="checkbox_name" checked>
+        <label for="r1">Op1</label>
+        <br><br>
+        <input type="radio" id="radio_1" name="radio_name" value="v1">
+        <label for="radio_1">Op1</label>
+        <br>
+        <input type="radio" id="radio_2" name="radio_name" value="v2">
+        <label for="r1">Op2</label>
+        <br>
+        <input type="radio" id="radio_3" name="radio_name" value="v3">
+        <label for="r1">Op3</label>
+        <br>
+        <input type="file" accept="image/*">
+        <input type="range" min="0" max="100" step="1">
+        <input type="color" value="#ff0000">
+        <button>Muestra</button>
+    </form>
+</body>
+
+<script>
+    document.querySelector("button").onclick=(e)=> {
+        //Para cuando el botón esta dentro de un form
+        e.preventDefault();
+
+        // console.log(document.querySelector("input[name='dato']").name);
+        // console.log(document.querySelector("input[name='dato']").value);
+        
+        // console.log(document.querySelector("input[type='checkbox']").checked);
+        // document.querySelector("#checkbox_id").checked = false;
+        // console.log(document.querySelector("input[type='checkbox']").checked);
+
+
+        console.log(document.forms[0].dato.name);
+        console.log("DATO", document.forms[0].dato.value);
+        console.log("check...", document.forms[0].checkbox_name.checked);
+        console.log("radio...", document.forms[0].radio_name.value);
+    }
+</script>
+</html>
