@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
-import { NgIf } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { products } from '../products';
 
 @Component({
