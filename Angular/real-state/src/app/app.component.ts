@@ -1,14 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 @Component({
   selector: 'app-root',
-  imports: [
-      RouterOutlet, HomeComponent
-    ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css', 
+  standalone: true,
+  imports: [ HomeComponent ],
   template: `
   <main>
     <header class="brand-name">
@@ -18,8 +14,10 @@ import { HomeComponent } from './home/home.component';
       <app-home></app-home>
     </section>
   </main>
-`
+`,
+  styleUrls: ['./app.component.css'],
 })
+
 export class AppComponent {
-  title = 'real-state';
+  title = 'homes';
 }
